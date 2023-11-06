@@ -7,6 +7,7 @@ import { HeaderhomeComponent } from './headerhome/headerhome.component';
 import { FooterhomeComponent } from './footerhome/footerhome.component';
 import { LoginComponent } from './login/login.component';
 import { BodyComponent } from './body/body.component';
+import { EncuestasComponent } from './encuestas/encuestas.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { BodyComponent } from './body/body.component';
     HeaderhomeComponent,
     FooterhomeComponent,
     LoginComponent,
-    BodyComponent
+    BodyComponent,
+    EncuestasComponent
   ],
   imports: [
     CommonModule,
