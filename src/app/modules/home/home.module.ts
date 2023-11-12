@@ -8,6 +8,8 @@ import { FooterhomeComponent } from './footerhome/footerhome.component';
 import { LoginComponent } from './login/login.component';
 import { BodyComponent } from './body/body.component';
 import { EncuestasComponent } from './encuestas/encuestas.component';
+import { Encuestas2Component } from './encuestas2/encuestas2.component';
+import { Encuestas3Component } from './encuestas3/encuestas3.component';
 
 
 @NgModule({
@@ -17,7 +19,9 @@ import { EncuestasComponent } from './encuestas/encuestas.component';
     FooterhomeComponent,
     LoginComponent,
     BodyComponent,
-    EncuestasComponent
+    EncuestasComponent,
+    Encuestas2Component,
+    Encuestas3Component
   ],
   imports: [
     CommonModule,

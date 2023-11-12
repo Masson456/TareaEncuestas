@@ -1,58 +1,47 @@
 
+<body>
+    <div class="container">
+        <h1>Encuesta de Anime</h1>
+        <form action="#" method="post">
+            <div class="question">
+                <label for="q1">1. ¿Cuál es tu anime favorito?</label>
+                <input type="text" id="q1" name="q1" required>
+            </div>
+            
+            <div class="question">
+                <label for="q2">2. ¿Cuántas horas a la semana ves anime?</label>
+                <input type="number" id="q2" name="q2" required>
+            </div>
 
-<button (click)="mostrarFormulario()">Mostrar Formulario 1</button>
+            <div class="question">
+                <label for="q3">3. ¿Prefieres anime subtitulado o doblado?</label>
+                <select id="q3" name="q3" required>
+                    <option value="subtitulado">Subtitulado</option>
+                    <option value="doblado">Doblado</option>
+                </select>
+            </div>
 
-<div *ngIf="formularioVisible">
-  <form>
-    <label for="pregunta1">Pregunta 1:</label>
-    <input type="text" id="pregunta1" name="pregunta1">
+            <div class="question">
+                <label for="q4">4. ¿Cuál es tu género de anime favorito?</label>
+                <input type="text" id="q4" name="q4" required>
+            </div>
 
-    <label for="pregunta2">Pregunta 2:</label>
-    <input type="text" id="pregunta1" name="pregunta2">
+            <div class="question">
+                <label for="q5">5. ¿Has asistido a convenciones de anime?</label>
+                <input type="radio" id="yes" name="q5" value="yes" required>
+                <label for="yes">Sí</label>
+                <input type="radio" id="no" name="q5" value="no" required>
+                <label for="no">No</label>
+            </div>
 
-    <label for="pregunta3">Pregunta 3:</label>
-    <input type="text" id="pregunta3" name="pregunta3">
+            <div class="question">
+                <label for="q6">6. ¿Recomendarías anime a tus amigos?</label>
+                <input type="checkbox" id="q6" name="q6" value="recomendar">
+                <label for="q6">Sí, recomendaría</label>
+            </div>
 
-  </form>
-  <button (click)="cerrarFormulario()">Cerrar Formulario</button>
-  <button (click)="enviarFormulario()">Enviar Formulario</button>
-</div>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+</body>
 
-
-<button (click)="mostrarFormulario2()">Mostrar Formulario 2</button>
-
-<div *ngIf="formularioVisible2">
-  <form>
-    <label for="pregunta1">Pregunta 1:</label>
-    <input type="text" id="pregunta1" name="pregunta1">
-
-    <label for="pregunta2">Pregunta 2:</label>
-    <input type="text" id="pregunta1" name="pregunta2">
-
-    <label for="pregunta3">Pregunta 3:</label>
-    <input type="text" id="pregunta3" name="pregunta3">
-
-  </form>
-  <button (click)="cerrarFormulario2()">Cerrar Formulario</button>
-  <button (click)="enviarFormulario2()">Enviar Formulario</button>
-</div>
-
-
-
-<button (click)="mostrarFormulario3()">Mostrar Formulario 3</button>
-
-<div *ngIf="formularioVisible3">
-  <form>
-    <label for="pregunta1">Como:</label>
-    <input type="text" id="pregunta1" name="pregunta1">
-
-    <label for="pregunta2">Donde:</label>
-    <input type="text" id="pregunta1" name="pregunta2">
-
-    <label for="pregunta3">Tu nombre:</label>
-    <input type="text" id="pregunta3" name="pregunta3">
-
-  </form>
-  <button (click)="cerrarFormulario3()">Cerrar Formulario</button>
-  <button (click)="enviarFormulario3()">Enviar Formulario</button>
-</div>
