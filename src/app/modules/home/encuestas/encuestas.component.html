@@ -2,45 +2,38 @@
 <body>
     <div class="container">
         <h1>Encuesta de Anime</h1>
-        <form action="#" method="post">
+        <form (ngSubmit)="OnSave" #encuestaForm="ngForm" method="post">
             <div class="question">
                 <label for="q1">1. ¿Cuál es tu anime favorito?</label>
-                <input type="text" id="q1" name="q1" required>
+                <input [(ngModel)]="q1" type="text" id="q1" name="q1" required>
             </div>
             
             <div class="question">
                 <label for="q2">2. ¿Cuántas horas a la semana ves anime?</label>
-                <input type="number" id="q2" name="q2" required>
+                <input   [(ngModel)]="q2"   type="text" id="q2" name="q2" required>
             </div>
 
             <div class="question">
                 <label for="q3">3. ¿Prefieres anime subtitulado o doblado?</label>
-                <select id="q3" name="q3" required>
-                    <option value="subtitulado">Subtitulado</option>
-                    <option value="doblado">Doblado</option>
-                </select>
+                <input   [(ngModel)]="q3"   type="text" id="q3" name="q3" required>
             </div>
 
             <div class="question">
                 <label for="q4">4. ¿Cuál es tu género de anime favorito?</label>
-                <input type="text" id="q4" name="q4" required>
+                <input [(ngModel)]="q4" type="text" id="q4" name="q4" required>
             </div>
 
             <div class="question">
                 <label for="q5">5. ¿Has asistido a convenciones de anime?</label>
-                <input type="radio" id="yes" name="q5" value="yes" required>
-                <label for="yes">Sí</label>
-                <input type="radio" id="no" name="q5" value="no" required>
-                <label for="no">No</label>
+                <input [(ngModel)]="q5" type="text" id="q5" name="q5" required>
             </div>
 
             <div class="question">
                 <label for="q6">6. ¿Recomendarías anime a tus amigos?</label>
-                <input type="checkbox" id="q6" name="q6" value="recomendar">
-                <label for="q6">Sí, recomendaría</label>
+                <input [(ngModel)]="q6" type="text" id="q6" name="q6" required>
             </div>
 
-            <button type="submit">Enviar</button>
+            <button type="button"  (click)="OnSave()">Enviar</button>
         </form>
     </div>
 </body>

@@ -2,10 +2,10 @@
 <body>
   <div class="container">
     <h1>Encuesta sobre Abuso Infantil</h1>
-    <form action="guardar_respuestas.php" method="post">
+    <form (ngSubmit)="OnSave3" #encuestaForm="ngForm" method="post">
       <div class="pregunta">
         <label for="pregunta1">1. ¿Estás consciente de la problemática del abuso infantil?</label>
-        <select id="pregunta1" name="pregunta1" required>
+        <select  [(ngModel)]="q13" id="pregunta1" name="pregunta1" required>
           <option value="si">Sí</option>
           <option value="no">No</option>
         </select>
@@ -13,7 +13,7 @@
 
       <div class="pregunta">
         <label for="pregunta2">2. ¿Crees que la sociedad está lo suficientemente informada sobre el abuso infantil?</label>
-        <select id="pregunta2" name="pregunta2" required>
+        <select [(ngModel)]="q14" id="pregunta2" name="pregunta2" required>
           <option value="si">Sí</option>
           <option value="no">No</option>
           <option value="no-se">No estoy seguro</option>
@@ -22,12 +22,12 @@
 
       <div class="pregunta">
         <label for="pregunta3">3. ¿Cómo crees que se podría mejorar la prevención del abuso infantil?</label>
-        <textarea id="pregunta3" name="pregunta3" rows="4" required></textarea>
+        <textarea  [(ngModel)]="q15" id="pregunta3" name="pregunta3" rows="4" required></textarea>
       </div>
 
       <div class="pregunta">
         <label for="pregunta4">4. ¿Has presenciado o conoces casos de abuso infantil en tu entorno?</label>
-        <select id="pregunta4" name="pregunta4" required>
+        <select [(ngModel)]="q16" id="pregunta4" name="pregunta4" required>
           <option value="si">Sí</option>
           <option value="no">No</option>
         </select>
@@ -35,7 +35,7 @@
 
       <div class="pregunta">
         <label for="pregunta5">5. ¿Crees que se necesita una mayor acción por parte de las autoridades para combatir el abuso infantil?</label>
-        <select id="pregunta5" name="pregunta5" required>
+        <select [(ngModel)]="q17" id="pregunta5" name="pregunta5" required>
           <option value="si">Sí</option>
           <option value="no">No</option>
           <option value="no-se">No estoy seguro</option>
@@ -44,13 +44,13 @@
 
       <div class="pregunta">
         <label for="pregunta6">6. ¿Te gustaría recibir información adicional sobre cómo prevenir el abuso infantil?</label>
-        <select id="pregunta6" name="pregunta6" required>
+        <select [(ngModel)]="q18" id="pregunta6" name="pregunta6" required>
           <option value="si">Sí</option>
           <option value="no">No</option>
         </select>
       </div>
 
-      <button type="submit">Enviar respuestas</button>
+      <button type="button"  (click)="OnSave3()" >Enviar respuestas</button>
     </form>
   </div>
 </body>

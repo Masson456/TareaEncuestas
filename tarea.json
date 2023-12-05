@@ -1,0 +1,10 @@
+{
+    "tarea": [
+      { "id": 1, "encu11": "Seminario-1"},
+      { "id": 2, "encu12": "Seminario-2"},
+      { "id": 3, "encu13": "Seminario-3"},
+      { "id": 4, "encu14": "Seminario-4"},
+      { "id": 5, "encu15": "Seminario-5"},
+      { "id": 6, "encu16": "Seminario-6"}
+    ]
+  }

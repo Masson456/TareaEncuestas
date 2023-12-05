@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
+import { FormsModule } from '@angular/forms';
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
 import { HeaderhomeComponent } from './headerhome/headerhome.component';
@@ -10,6 +10,9 @@ import { BodyComponent } from './body/body.component';
 import { EncuestasComponent } from './encuestas/encuestas.component';
 import { Encuestas2Component } from './encuestas2/encuestas2.component';
 import { Encuestas3Component } from './encuestas3/encuestas3.component';
+import { SharedModule } from './shared/shared.module';
+import { CursoService } from 'src/app/services/curso.service';
+
 
 
 @NgModule({
@@ -21,11 +24,13 @@ import { Encuestas3Component } from './encuestas3/encuestas3.component';
     BodyComponent,
     EncuestasComponent,
     Encuestas2Component,
-    Encuestas3Component
+    Encuestas3Component,
   ],
   imports: [
     CommonModule,
-    HomeRoutingModule
+    HomeRoutingModule,
+    FormsModule,
+    SharedModule,
   ]
 })
 export class HomeModule { }

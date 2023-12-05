@@ -2,32 +2,26 @@
 <body>
   <div class="container">
     <h1>Encuesta de Videojuegos</h1>
-    <form id="encuestaForm">
+    <form (ngSubmit)="OnSave2" #encuestaForm="ngForm" id="encuestaForm" method="post">
       <label for="nombre">1. ¿Cuál es tu nombre?</label>
-      <input type="text" id="nombre" name="nombre" required>
+      <input [(ngModel)]="q7" type="text" id="nombre" name="nombre" required>
 
       <label for="edad">2. ¿Cuál es tu edad?</label>
-      <input type="number" id="edad" name="edad" required>
+      <input [(ngModel)]="q8" type="text" id="edad" name="edad" required>
 
       <label for="genero">3. ¿Cuál es tu género favorito de videojuegos?</label>
-      <select id="genero" name="genero" required>
-        <option value="accion">Acción</option>
-        <option value="aventura">Aventura</option>
-        <option value="estrategia">Estrategia</option>
-        <option value="deportes">Deportes</option>
-        <option value="otros">Otros</option>
-      </select>
+      <input [(ngModel)]="q9" type="text" id="genero" name="genero" required>
 
       <label for="plataforma">4. ¿En qué plataforma sueles jugar más?</label>
-      <input type="text" id="plataforma" name="plataforma" required>
+      <input [(ngModel)]="q10" type="text" id="plataforma" name="plataforma" required>
 
       <label for="juego-fav">5. ¿Cuál es tu juego favorito?</label>
-      <input type="text" id="juego-fav" name="juego-fav" required>
+      <input [(ngModel)]="q11" type="text" id="juego-fav" name="juego-fav" required>
 
       <label for="opinion">6. ¿Quisieras agregar algún comentario adicional?</label>
-      <textarea id="opinion" name="opinion"></textarea>
+      <textarea [(ngModel)]="q12" id="opinion" name="opinion"></textarea>
 
-      <button type="submit">Enviar Encuesta</button>
+      <button type="button"  (click)="OnSave2()">Enviar Encuesta</button>
     </form>
   </div>
 </body>

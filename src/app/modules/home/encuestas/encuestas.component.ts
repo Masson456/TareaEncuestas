@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CursoService } from 'src/app/services/curso.service';
 
 @Component({
   selector: 'app-encuestas',
@@ -6,58 +7,33 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./encuestas.component.sass']
 })
 export class EncuestasComponent {
-  formularioVisible: boolean = false;
+  q1: string = '';
+  q2: string = '';
+  q3: string = '';
+  q4: string = '';
+  q5: string = '';
+  q6: string = '';
 
-  mostrarFormulario() {
-    this.formularioVisible = true;
-  }
+  constructor(private CursoService: CursoService) {}
 
-  cerrarFormulario() {
-    this.formularioVisible = false;
-  }
+  OnSave() {
+    const respuestas = {
+      q1: this.q1,
+      q2: this.q2,
+      q3: this.q3,
+      q4: this.q4,
+      q5: this.q5,
+      q6: this.q6,
+    };
 
-  enviarFormulario() {
+    console.log('Respuestas:', respuestas);
     
-    this.formularioVisible = false;
-  }
+    if (this.CursoService) {
+      this.CursoService.guardarRespuestas(respuestas);
+    }
 
-
-  formularioVisible2: boolean = false;
-
-  mostrarFormulario2() {
-    this.formularioVisible2 = true;
-  }
-
-  cerrarFormulario2() {
-    this.formularioVisible2 = false;
-  }
-
-  enviarFormulario2() {
-    
-    this.formularioVisible2 = false;
-  }
-
-  
-  formularioVisible3: boolean = false;
-
-  mostrarFormulario3() {
-    this.formularioVisible3 = true;
-  }
-
-  cerrarFormulario3() {
-    this.formularioVisible3 = false;
-  }
-
-  enviarFormulario3() {
-    
-    this.formularioVisible3 = false;
-  }
-
-
-
+   
+}
 
 
 }
-  
-
-

@@ -1,34 +1,232 @@
+
 <div class="body">
+  <h2>Respuestas Primera encuesta</h2>
 
-<div id="contenedor">
-            
-    <div id="contenedorcentrado">
-        <div id="login">
-            <form id="loginform">
-                <label for="usuario">Usuario</label>
-                <input id="usuario" type="text" name="usuario" placeholder="Usuario" required>
-                
-                <label for="password">Contraseña</label>
-                <input id="password" type="password" placeholder="Contraseña" name="password" required>
-                
-                <button type="submit" title="Ingresar" name="Ingresar">Login</button>
-            </form>
-            
-        </div>
-        <div id="derecho">
-            <div class="titulo">
-                Bienvenido
-            </div>
-            <hr>
-            <div class="pie-form">
-                <a href="#">¿Perdiste tu contraseña?</a>
-                <a href="#">¿No tienes Cuenta? Registrate</a>
-                <hr>
-                <a href="#">« Volver</a>
-            </div>
-        </div>
-    </div>
+  <!-- componente-tabla.component.html -->
+<table>
+  <thead>
+    <tr>
+      <th>Pregunta 1</th>
+      <th>Pregunta 2</th>
+      <th>Pregunta 3</th>
+      <th>Pregunta 4</th>
+      <th>Pregunta 5</th>
+      <th>Pregunta 6</th>
+      <th>Borrar/editar</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let respuesta of respuestas">
+      <td>{{ respuesta.q1 }}</td>
+      <td>{{ respuesta.q2 }}</td>
+      <td>{{ respuesta.q3 }}</td>
+      <td>{{ respuesta.q4 }}</td>
+      <td>{{ respuesta.q5 }}</td>
+      <td>{{ respuesta.q6 }}</td>
+      <td>
+        <button type="button" (click)="borrarDatoEspecifico(respuesta.id)">Borrar Dato</button>
+        <button type="button" (click)="activarEdicion(respuesta)">Editar</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
 </div>
 
 
+
+
+
+
+<div class="edit-form-container" *ngIf="modoEdicion">
+  <h3>Editando Respuesta</h3>
+  
+  <form  (submit)="guardarCambiosEditados()">
+    
+    <label for="q1-edit">Pregunta 1:</label>
+    <input [(ngModel)]="respuestaEditando.q1" id="q1-edit" name="q1-edit" required>
+
+    <label for="q2-edit">Pregunta 2:</label>
+    <input [(ngModel)]="respuestaEditando.q2" id="q2-edit" name="q2-edit" required>
+
+    <label for="q3-edit">Pregunta 3:</label>
+    <input [(ngModel)]="respuestaEditando.q3" id="q3-edit" name="q3-edit" required>
+
+    <label for="q4-edit">Pregunta 4:</label>
+    <input [(ngModel)]="respuestaEditando.q4" id="q4-edit" name="q4-edit" required>
+
+    <label for="q5-edit">Pregunta 5:</label>
+    <input [(ngModel)]="respuestaEditando.q5" id="q5-edit" name="q5-edit" required>
+
+    <label for="q6-edit">Pregunta 6:</label>
+    <input [(ngModel)]="respuestaEditando.q6" id="q6-edit" name="q6-edit" required>
+  
+
+
+    <button type="submit">Guardar Cambios</button>
+  </form>
+
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="body">
+  <h2>Respuestas Segunda Encuesta</h2>
+
+ <table>
+  <thead>
+    <tr>
+      <th>Pregunta 1</th>
+      <th>Pregunta 2</th>
+      <th>Pregunta 3</th>
+      <th>Pregunta 4</th>
+      <th>Pregunta 5</th>
+      <th>Pregunta 6</th>
+      <th>Borrar/editar</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let respuesta2 of respuestas2">
+      <td>{{ respuesta2.q7 }}</td>
+      <td>{{ respuesta2.q8 }}</td>
+      <td>{{ respuesta2.q9 }}</td>
+      <td>{{ respuesta2.q10 }}</td>
+      <td>{{ respuesta2.q11 }}</td>
+      <td>{{ respuesta2.q12 }}</td>
+      <td>
+        <button type="button" (click)="borrarDatoEspecifico2(respuesta2.id)">Borrar Dato</button>
+        <button type="button" (click)="activarEdicion2(respuesta2)">Editar</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+</div>
+
+
+
+
+<div class="edit-form-container" *ngIf="modoEdicion2">
+  <h3>Editando Respuesta</h3>
+  
+  <form  (submit)="guardarCambiosEditados2()">
+    
+    <label for="q7-edit">Pregunta 1:</label>
+    <input [(ngModel)]="respuestaEditando2.q7" id="q7-edit" name="q7-edit" required>
+
+    <label for="q8-edit">Pregunta 2:</label>
+    <input [(ngModel)]="respuestaEditando2.q8" id="q8-edit" name="q8-edit" required>
+
+    <label for="q9-edit">Pregunta 3:</label>
+    <input [(ngModel)]="respuestaEditando2.q9" id="q9-edit" name="q9-edit" required>
+
+    <label for="q10-edit">Pregunta 4:</label>
+    <input [(ngModel)]="respuestaEditando2.q10" id="q10-edit" name="q10-edit" required>
+
+    <label for="q11-edit">Pregunta 5:</label>
+    <input [(ngModel)]="respuestaEditando2.q11" id="q11-edit" name="q11-edit" required>
+
+    <label for="q12-edit">Pregunta 6:</label>
+    <input [(ngModel)]="respuestaEditando2.q12" id="q12-edit" name="q12-edit" required>
+
+    <button type="submit">Guardar Cambios</button>
+  </form>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="body">
+  <h2>Respuestas Tercera Encuesta</h2>
+
+  <!-- componente-tabla.component.html -->
+<table>
+  <thead>
+    <tr>
+      <th>Pregunta 1</th>
+      <th>Pregunta 2</th>
+      <th>Pregunta 3</th>
+      <th>Pregunta 4</th>
+      <th>Pregunta 5</th>
+      <th>Pregunta 6</th>
+      <th>Borrar/editar</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let respuesta3 of respuestas3">
+      <td>{{ respuesta3.q13 }}</td>
+      <td>{{ respuesta3.q14 }}</td>
+      <td>{{ respuesta3.q15 }}</td>
+      <td>{{ respuesta3.q16 }}</td>
+      <td>{{ respuesta3.q17 }}</td>
+      <td>{{ respuesta3.q18 }}</td>
+      <td>
+        <button type="button" (click)="borrarDatoEspecifico3(respuesta3.id)">Borrar Dato</button>
+        <button type="button" (click)="activarEdicion3(respuesta3)">Editar</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+</div>
+
+
+
+
+
+
+<div class="edit-form-container" *ngIf="modoEdicion3">
+  <h3>Editando Respuesta</h3>
+  
+  <form  (submit)="guardarCambiosEditados3()">
+    
+    <label for="q7-edit">Pregunta 1:</label>
+    <input [(ngModel)]="respuestaEditando3.q13" id="q13-edit" name="q13-edit" required>
+
+    <label for="q8-edit">Pregunta 2:</label>
+    <input [(ngModel)]="respuestaEditando3.q14" id="q14-edit" name="q14-edit" required>
+
+    <label for="q9-edit">Pregunta 3:</label>
+    <input [(ngModel)]="respuestaEditando3.q15" id="q15-edit" name="q15-edit" required>
+
+    <label for="q10-edit">Pregunta 4:</label>
+    <input [(ngModel)]="respuestaEditando3.q16" id="q16-edit" name="q16-edit" required>
+
+    <label for="q11-edit">Pregunta 5:</label>
+    <input [(ngModel)]="respuestaEditando3.q17" id="q17-edit" name="q17-edit" required>
+
+    <label for="q12-edit">Pregunta 6:</label>
+    <input [(ngModel)]="respuestaEditando3.q18" id="q18-edit" name="q18-edit" required>
+
+    <button type="submit">Guardar Cambios</button>
+  </form>
+
+</div>
+

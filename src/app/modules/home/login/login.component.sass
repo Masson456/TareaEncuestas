@@ -1,219 +1,83 @@
+// Estilos para la tabla
+table 
+  width: 100%
+  border-collapse: collapse
+  margin-top: 20px
+
+
+// Estilos para las celdas del encabezado y datos
+th, td 
+  border: 1px solid #dddddd
+  text-align: left
+  padding: 8px
+  
+
+td 
+  color: #ffffff
+
+// Estilos para el encabezado
+th 
+  background-color: #f2f2f2
+
+
+// Estilos generales
+body 
+  font-family: Arial, sans-serif
+  color: #333
+
+
+// Estilos para el título
+h2 
+  color: #e91313
+  text-align: center
+
+
+// Estilos para el contenedor principal
+.body 
+  max-width: 800px
+  margin: 0 auto
 
 
 
 
 
-/* efectos para el contenedor de pantalla completa */
-#contenedor 
-    display: flex
-    align-items: center
-    justify-content: center
-    
-    margin: 0
-    padding: 0
-    min-width: 80vw
-    min-height: 80vh
-    width: 100%
-    height: 100%
-    
-    background-image: url("/images/backgrounds/07.jpg")
-    background-position: center
-    background-size: cover
 
 
-/* contenedor del login a la izquierda */
-#contenedorcentrado 
-    display: flex
-    align-items: center
-    justify-content: center
-    flex-direction: row
-    
-    min-width: 380px
-    max-width: 900px
-    width: 90%
-    
-    background-color: #5f6769
-    
-    
-    filter: alpha(opacity=50)
-    
-    border-radius: 10px 10px 10px 10px
-    -moz-border-radius: 10px 10px 10px 10px
-    -webkit-border-radius: 10px 10px 10px 10px
-    
-    -webkit-box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.15)
-    -moz-box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.15)
-    box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.15)
-    
-    padding: 30px
-    box-sizing: border-box
 
+  //sass de editar
+  
+div.edit-form-container 
+  margin: 20px
+  padding: 20px
+  border: 1px solid #ccc
+  border-radius: 5px
 
-/* formulario de login */
-/* formulario de login */
-#login 
-    width: 80%
-    max-width: 300px
-    min-width: 300px
-    padding: 20px 20px 40px 20px
-    background-color: #719192
-
-    -webkit-box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.15)
-    -moz-box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.15)
-    box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.15)
-
-    border-radius: 3px 3px 3px 3px
-    -moz-border-radius: 3px 3px 3px 3px
-    -webkit-border-radius: 3px 3px 3px 3px
-    
-    box-sizing: border-box
-    
-    opacity: 1
-    filter: alpha(opacity=1)
-
-
-#login label 
-    display: block
-    font-family: 'Overpass', sans-serif
-    font-size: 120%
-    color:#3c4245
-    
-    margin-top: 15px
-
-
-#login input 
-    font-family: 'Overpass', sans-serif
-    font-size: 110%
-    color: #1b262c
-    
-    display: block
-    width: 100%
-    height: 40px
-    
+  h3 
+    font-size: 18px
     margin-bottom: 10px
-    padding: 5px 5px 5px 10px
+    color: #f7eeee 
+  
 
-    box-sizing: border-box
-    
-    border: none
-    border-radius: 3px 3px 3px 3px
-    -moz-border-radius: 3px 3px 3px 3px
-    -webkit-border-radius: 3px 3px 3px 3px
-
-
-#login input::placeholder 
-    font-family: 'Overpass', sans-serif
-    color: #E4E4E4
-
-
-#login button 
-    font-family: 'Overpass', sans-serif
-    font-size: 110%
-    color:#1b262c
-    width: 100%
-    height: 40px
-    border: none
-
-    border-radius: 3px 3px 3px 3px
-    -moz-border-radius: 3px 3px 3px 3px
-    -webkit-border-radius: 3px 3px 3px 3px
-    
-    background-color: #dfcdc3
-    
-    margin-top: 10px
-
-
-#login button:hover 
-    background-color: #3c4245
-    color:#dfcdc3
-
-/* formulario de login */
-/* formulario de login */
-
-/* seccion de la derecha */
-/* seccion de la derecha */
-/* por defecto */
-#derecho 
-    
-    align-items: center
-    justify-content: center
-    
-    text-align: center
-    width: 80%
-    
-    opacity: 0.70
-    filter: alpha(opacity=70)
-    
-    padding:20px 20px 20px 50px
-    box-sizing: border-box
-
-
-.titulo 
-    font-size: 200%
-    color:#dfcdc3
-
-
-.logo-empresa img 
-    width: 60%
-
-
-hr
-    border-top: 1px solid #8c8b8b
-    border-bottom: 1px solid #dfcdc3
-    
-
-
-.pie-form 
-    font-size: 90%
-    text-align: center 
-    margin-top: 15px
-
-
-.pie-form a 
+  
+  label
     display: block
-    text-decoration: none
-    color: #dfcdc3
-    margin-bottom: 3px
+    margin-bottom: 5px
+    color: #f7eeee
+  
 
-
-.pie-form a:hover 
-    color: #719192
-
-
-
-@media all and (max-width: 700px)
-
-#contenedorcentrado 
-    flex-direction:column-reverse
-    min-width: 380px
-    max-width: 900px
-    width: 90%
-
-    background-color: #5f6769
-
-        
-    filter: alpha(opacity=50)
-
-    border-radius: 10px 10px 10px 10px
-    -moz-border-radius: 10px 10px 10px 10px
-    -webkit-border-radius: 10px 10px 10px 10px
-
-    -webkit-box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.15)
-    -moz-box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.15)
-    box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.15)
-
-    padding: 30px
+  input
+    width: 100%
+    padding: 8px
+    margin-bottom: 10px
     box-sizing: border-box
+  
+  
+  button
+    background-color: #4CAF50
+    color: white
+    padding: 10px 15px
+    border: none
+    border-radius: 5px 
+    cursor: pointer
+  
 
-
-#login 
-    margin: 0 auto
-    
-    
-#derecho 
-        padding:20px 20px 20px 20px
-    
-
-#login label 
-     text-align: left
-    
