@@ -1,28 +1,28 @@
 import { Component, OnInit } from '@angular/core';
 import { CursoService } from 'src/app/services/curso.service';
-
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.sass']
 })
-export class HomeComponent implements OnInit{
+export class HomeComponent {
   
   onPregunta(item: any){
     console.log(item)
   }
   
-  //public tarea: any[];
 
   constructor(
-    public cursoService: CursoService
+    public cursoService: CursoService, private http: HttpClient
   ){}
-  ngOnInit() {
-    this.cursoService.cargar().subscribe( (res)=>{
-    //  this.tarea = res;
-    })
-    
+
+
+  cargar(): Observable<any[]> {
+    // Lógica para cargar datos, por ejemplo, una llamada HTTP
+    return this.http.get<any[]>('http://localhost:3000/tarea');
   }
 
 }

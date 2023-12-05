@@ -6,6 +6,8 @@ import { EncuestasComponent } from './encuestas/encuestas.component';
 import { Encuestas2Component } from './encuestas2/encuestas2.component';
 import { Encuestas3Component } from './encuestas3/encuestas3.component';
 import { LoginComponent } from './login/login.component';
+import { EstudiantesComponent } from './estudiantes/estudiantes.component';
+
 
 
 const routes: Routes = [
@@ -15,6 +17,7 @@ const routes: Routes = [
     {path: 'encuestas', component: EncuestasComponent},
     {path: 'encuestas2', component: Encuestas2Component},
     {path: 'encuestas3', component: Encuestas3Component},
+    {path: 'estudiantes', component: EstudiantesComponent },
   ]
   }
 ];

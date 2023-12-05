@@ -35,14 +35,11 @@
 
 
 
-
-
-
 <div class="edit-form-container" *ngIf="modoEdicion">
   <h3>Editando Respuesta</h3>
-  
-  <form  (submit)="guardarCambiosEditados()">
-    
+
+  <form (submit)="guardarCambiosEditados()">
+
     <label for="q1-edit">Pregunta 1:</label>
     <input [(ngModel)]="respuestaEditando.q1" id="q1-edit" name="q1-edit" required>
 
@@ -60,23 +57,10 @@
 
     <label for="q6-edit">Pregunta 6:</label>
     <input [(ngModel)]="respuestaEditando.q6" id="q6-edit" name="q6-edit" required>
-  
-
 
     <button type="submit">Guardar Cambios</button>
   </form>
-
 </div>
-
-
-
-
-
-
-
-
-
-
 
 
 

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CursoService } from 'src/app/services/curso.service';
+import { HttpClient } from '@angular/common/http';
 @Component({
   selector: 'app-encuestas3',
   templateUrl: './encuestas3.component.html',
@@ -14,7 +15,7 @@ export class Encuestas3Component {
   q17: string = '';
   q18: string = '';
 
-  constructor(private CursoService: CursoService) {}
+  constructor(private CursoService: CursoService, private http: HttpClient) {}
 
   OnSave3() {
     const respuestas3 = {
@@ -27,10 +28,19 @@ export class Encuestas3Component {
     };
 
     console.log('Respuestas:', respuestas3);
+
+    this.http.post('http://localhost:3000/tarea', respuestas3).subscribe(
+     (response) => {
+       console.log('Datos enviados correctamente:', response);
+      },
+      (error) => {
+        console.error('Error al enviar los datos:', error);
+      }
+    );
     
-    if (this.CursoService) {
-      this.CursoService.guardarRespuestas3(respuestas3);
-    }
+    //if (this.CursoService) {
+      //this.CursoService.guardarRespuestas3(respuestas3);
+    //}
 
 
 }

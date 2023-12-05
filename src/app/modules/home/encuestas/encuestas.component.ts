@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CursoService } from 'src/app/services/curso.service';
-
+import { HttpClient } from '@angular/common/http';
 @Component({
   selector: 'app-encuestas',
   templateUrl: './encuestas.component.html',
@@ -14,9 +14,10 @@ export class EncuestasComponent {
   q5: string = '';
   q6: string = '';
 
-  constructor(private CursoService: CursoService) {}
+  constructor(private CursoService: CursoService, private http: HttpClient) {}
 
   OnSave() {
+ 
     const respuestas = {
       q1: this.q1,
       q2: this.q2,
@@ -27,10 +28,21 @@ export class EncuestasComponent {
     };
 
     console.log('Respuestas:', respuestas);
+
     
-    if (this.CursoService) {
-      this.CursoService.guardarRespuestas(respuestas);
-    }
+
+   this.http.post('http://localhost:3000/tarea', respuestas).subscribe(
+     (response) => {
+       console.log('Datos enviados correctamente:', response);
+      },
+      (error) => {
+        console.error('Error al enviar los datos:', error);
+      }
+    );
+    
+    //if (this.CursoService) {
+      //this.CursoService.guardarRespuestas(respuestas);
+    //}
 
    
 }
